@@ -76,7 +76,7 @@ object Decoder {
   }
 
   implicit object ByteDecoder extends Decoder[Byte] {
-    override def decode(value: Any, schema: Schema)(implicit naming: NamingStrategy = DefaultNamingStrategy): Byte = value.asInstanceOf[Int].toByte
+    override def decode(value: Any, schema: Schema)(implicit naming: NamingStrategy = DefaultNamingStrategy): Byte = value.asInstanceOf[Byte]
   }
 
   implicit object ShortDecoder extends Decoder[Short] {
